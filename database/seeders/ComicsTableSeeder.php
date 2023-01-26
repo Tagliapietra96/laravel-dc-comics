@@ -15,7 +15,7 @@ class ComicsTableSeeder extends Seeder
      */
     public function run()
     {
-        $data = config('my.comics');
+        $data = config('comics_db');
 
         foreach($data as $row){
             $newComic = new Comic();
@@ -26,6 +26,7 @@ class ComicsTableSeeder extends Seeder
             $newComic->series = $row['series'];
             $newComic->sale_date = $row['sale_date'];
             $newComic->type = $row['type'];
+            $newComic->save();
         }
     }
 }
