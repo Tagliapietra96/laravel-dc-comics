@@ -15,9 +15,9 @@
 
 </head>
 
-<body>
+<body class="bg-dark py-5">
 
-
+@yield('content')
 
 </body>
 
