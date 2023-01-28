@@ -7,6 +7,12 @@
           <hr class="flex-fill">
           <p class="card-text ">€ {{$comic->price}}</p>
           <a href="{{route("comics.show", $comic->id)}}" class="btn btn-primary">Details</a>
+          <a href="{{route("comics.edit", $comic->id)}}" class="btn btn-primary my-3">Edit</a>
+          <form action="{{route("comics.destroy", $comic->id)}}" method="POST" class="destroy-btn">
+            @csrf()
+            @method("delete")
+            <button class="btn btn-danger w-100">Delete</button>
+          </form>
         </div>
       </div>
 </div>
