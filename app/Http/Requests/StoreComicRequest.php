@@ -24,13 +24,13 @@ class StoreComicRequest extends FormRequest
     public function rules()
     {
         return [
-            "title" => "reuired|string|min:5|max:100",
-            "description" => "reuired|string|min:5|max:100",
-            "price" => "reuired|decimal:8,2|min:5|max:100",
-            "series" => "reuired|string|min:5|max:100",
-            "thumb" => "reuired|string|min:5|max:100",
-            "sale_date" => "reuired|date|min:5|max:100",
-            "type" => "reuired|string|min:5|max:100"
+            "title" => "required|string|min:5|max:100",
+            "description" => "required|string|min:5|max:100",
+            "price" => "required|decimal:8,2|min:5|max:100",
+            "series" => "required|string|min:5|max:100",
+            "thumb" => "required|string|min:5|max:100",
+            "sale_date" => "required|date|min:5|max:100",
+            "type" => "required|string|min:5|max:100"
         ];
     }
 }

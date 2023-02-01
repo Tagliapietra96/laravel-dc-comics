@@ -13,7 +13,7 @@ class UpdateComicRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,8 +24,8 @@ class UpdateComicRequest extends FormRequest
     public function rules()
     {
         return [
-            "title" => "reuired|string|min:5|max:100",
-            "price" => "reuired|decimal:8,2|min:5|max:100"
+            "title" => "required|string|min:5|max:100",
+            "price" => "required|decimal:8,2|min:5|max:100"
         ];
     }
 }
